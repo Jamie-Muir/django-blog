@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+	The post title
+{% endblock title %}
+	
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock stylesheets %}
+	
+
+{% block content %}
+	<section id="summary">
+		<h2>Post Title</h2>
+		<article>
+			<img src="blog/images/picture.jpg" alt="Post Title">
+			<address>By Django</address>
+			<div>
+				last updated on <time>July 10th<time>
+			</div>
+		</article>
+	</section>
+	<main>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ducimus ipsa itaque debitis eveniet vel dolore nisi ea ad tempora dolores minus repellendus temporibus odio aliquam quibusdam impedit, nam blanditiis.
+		</p>
+	</main>
+{% endblock content %}
+	
