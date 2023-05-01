@@ -16,17 +16,15 @@
 	<section id="summary">
 		<h2>Post Title</h2>
 		<article>
-			<img src="blog/images/picture.jpg" alt="Post Title">
+			<img src="{% static "blog/images/"|add:post.image %}" alt={{ post.title }}>
 			<address>By Django</address>
 			<div>
-				last updated on <time>July 10th<time>
+				last updated on <time>{{ post.date }}<time>
 			</div>
 		</article>
 	</section>
 	<main>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ducimus ipsa itaque debitis eveniet vel dolore nisi ea ad tempora dolores minus repellendus temporibus odio aliquam quibusdam impedit, nam blanditiis.
-		</p>
+		{{ post.content|linebreaks }}
 	</main>
 {% endblock content %}
 	
